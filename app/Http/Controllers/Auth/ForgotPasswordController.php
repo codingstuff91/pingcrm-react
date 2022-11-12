@@ -50,5 +50,7 @@ class ForgotPasswordController extends Controller
     private function sendResetPasswordEmail($email)
     {
         Mail::to($email)->send(new ForgotPasswordMail());
+
+        return redirect()->route('login')->with('success', 'We did it !');
     }
 }

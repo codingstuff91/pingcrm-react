@@ -38,6 +38,6 @@ class DatabaseSeeder extends Seeder
                 $contact->update(['organization_id' => $organizations->random()->id]);
             });
         
-        Report::factory()->count(10)->create();
+        Report::factory()->count(30)->create();
     }
 }
